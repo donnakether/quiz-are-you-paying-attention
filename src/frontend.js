@@ -32,8 +32,10 @@ function Quiz(props) {
     return (
       <div className="paying-attention-frontend" style={{backgroundColor: props.bgColor, textAlign: props.theAlignment}}>
         <p>{props.question}</p>
+        
         <ul>
           {props.answers.map(function(answer, index) {
+           
             return (
             <li className={(isCorrectDelayed === true && index == props.correctAnswer ? "no-click" : "") + (isCorrectDelayed === true && index != props.correctAnswer ? "fade-incorrect" : "")} onClick={isCorrect === true ? undefined : () => handleAnswer(index)}>
                 {isCorrectDelayed === true && index == props.correctAnswer && (

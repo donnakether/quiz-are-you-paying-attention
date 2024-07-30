@@ -1,5 +1,5 @@
 import "./index.scss"
-import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon, PanelBody, PanelRow, ColorPicker} from "@wordpress/components"
+import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon, PanelBody, PanelRow} from "@wordpress/components"
 import {InspectorControls,BlockControls, AlignmentToolbar} from "@wordpress/block-editor" 
 import {ChromePicker} from "react-color"
 
@@ -55,7 +55,8 @@ function EditComponent (props) {
     function updateQuestion(value) {
       props.setAttributes({question: value})
     }
-
+    
+  
     function deleteAnswer(indexToDelete) {
         const newAnswers = props.attributes.answers.filter(function(x, index) {
            return index != indexToDelete
